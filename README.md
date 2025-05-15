@@ -10,9 +10,11 @@ The generator is designed to synthesize realistic distortions in sets of aerial 
 
 * [Data Source](#3-data-source)
 
-* [Contributions](#4-contributions)
+* [Getting started](#4-getting-started)
 
-* [Contacts](#5-contacts)
+* [Contributions](#5-contributions)
+
+* [Contacts](#6-contacts)
 
 ## 1. Introduction
 In conditions of limited availability of GNSS and the dynamic nature of the environment, the creation of semi-synthetic UAV image datasets capable of
@@ -173,11 +175,48 @@ This repository generates synthetic UAV images from **high-resolution TIFF maps*
 #### **Implementation**  
 The core processing workflow is implemented in the script located at: [processing_tiff.py](https://github.com/PSofya/Generator-semi-syntheticUAV-dataset/blob/main/src/scripts/processing_tiff.py).
 
-## 4. Contributions
+## 4. Getting started
+
+### Prerequisites
+
+- Python 3.9+
+- GPU Memory >= 8G
+- Numpy >= 1.23.0
+- OpenCV >= 4.11.0.86
+- Pandas >= 2.2.2
+- Augmentor = 0.2.12
+- PyCharm 2021.3.2
+
+### Setup Instructions
+1. Clone repository:
+```bash
+git clone https://github.com/PSofya/Generator-semi-syntheticUAV-dataset.git
+cd Generator-semi-syntheticUAV-dataset
+```
+
+2. Create virtual environment:
+```bash
+python -m venv venv
+source venv/bin/activate  # Linux/Mac
+venv\Scripts\activate  # Windows
+```
+
+3. Install dependencies:
+```bash
+pip install -r requirements.txt
+pip install -e .
+```
+
+4. Run augmentation:
+```bash
+python examples/run_augmentation.py
+```
+
+## 5. Contributions
 The importance of this study lies in addressing the limitations of current visual localization methods that often struggle in complex environments. The modular design of the generator ensures **reproducibility, scalability, and compatibility** with downstream computer vision workflows.
 The results demonstrates that training models on the generated semi-synthetic data could lead to **improvements in localization accuracy**.
 
-## 5. Contacts
+## 6. Contacts
 Developer: saborisova_1@miem.hse.ru (Borisova Sofya)
 
 a.romanov@hse.ru (Aleksandr Romanov, Professor)
