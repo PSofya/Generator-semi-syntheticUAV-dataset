@@ -45,7 +45,17 @@ The semi-synthetic data generator is designed as a **modular system** that ensur
 #### 2. **Optical Distortion Module**  
 Simulates UAV-specific optical effects:  
 - **Fisheye distortion**
-- **Wide-angle distortion**  
+
+| Input Image                                                                                                                       |   | Fisheye effect: strength = 1.2                                                                                                        |
+|-----------------------------------------------------------------------------------------------------------------------------------|---|-------------------------------------------------------------------------------------------------------------------------|
+| ![without_distortion](https://github.com/PSofya/Generator-semi-syntheticUAV-dataset/blob/master/src/data/uav_dataset/frame_0095.jpg) | → | ![Fisheye_distortion](https://github.com/PSofya/Generator-semi-syntheticUAV-dataset/blob/master/src/data/uav_dataset_augmented/frame_0095_fisheye.jpg) |
+
+
+- **Wide-angle distortion**
+
+| Input Image                                                                                                                       |   | Wide-angle effect: k1=-0.5, k2=0.05, k3=0.05, k4=0                                                       |
+|-----------------------------------------------------------------------------------------------------------------------------------|---|-------------------------------------------------------------------------------------------------------------------------|
+| ![without_distortion](https://github.com/PSofya/Generator-semi-syntheticUAV-dataset/blob/master/src/data/uav_dataset/frame_0095.jpg) | → | ![Wide_angle](https://github.com/PSofya/Generator-semi-syntheticUAV-dataset/blob/master/src/data/uav_dataset_augmented/frame_0095_wideangle.jpg) |
 
 #### 3. **Photometric & Geometric Augmentation Module**  
 Applies transformations with configurable parameters:  
@@ -57,11 +67,19 @@ Applies transformations with configurable parameters:
   - Application probability for each transformation  
   - Customizable intensity ranges  
 
+| Input Image                                                                                                                       |   | After Augmentation Module                                                                                             |
+|-----------------------------------------------------------------------------------------------------------------------------------|---|-------------------------------------------------------------------------------------------------------------------------|
+| ![without_distortion](https://github.com/PSofya/Generator-semi-syntheticUAV-dataset/blob/master/src/data/uav_dataset/frame_0095.jpg) | → | ![geometricandphotometric](https://github.com/PSofya/Generator-semi-syntheticUAV-dataset/blob/master/src/doc/geometricandphotometric.png) |
+
 #### 4. **Fog Simulation Module**  
 Physically accurate fog rendering based on:  
 - Depth estimation  
 - Light scattering models  
 - Transmission coefficient calculations  
+
+| Input Image                                                                                                                       |   | Fogged image: intensity = 0.8                                              |
+|-----------------------------------------------------------------------------------------------------------------------------------|---|-------------------------------------------------------------------------------------------------------------------------|
+| ![without_distortion](https://github.com/PSofya/Generator-semi-syntheticUAV-dataset/blob/master/src/data/uav_dataset/frame_0095.jpg) | → | ![Fog](https://github.com/PSofya/Generator-semi-syntheticUAV-dataset/blob/master/src/data/uav_dataset_augmented/frame_0095_fog.jpg) |
 
 #### 5. **Metadata Generation**  
 Stores per-image metadata in CSV format:  
@@ -119,7 +137,7 @@ Generator-semi-syntheticUAV-dataset/
 ---
 
 ## 3. Data Source
-This repository generates synthetic UAV images from **high-resolution TIFF maps** (Aklavik and UAV-VisLoc datasets).  
+This repository generates synthetic UAV images from **high-resolution TIFF maps** ([Aklavik](https://zenodo.org/records/14608566) and [UAV-VisLoc](https://github.com/IntelliSensing/UAV-VisLoc/tree/main?tab=readme-ov-file) datasets).  
 
 ---
 
