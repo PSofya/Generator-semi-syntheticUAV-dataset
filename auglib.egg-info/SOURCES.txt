@@ -1,0 +1,14 @@
+setup.py
+auglib/__init__.py
+auglib.egg-info/PKG-INFO
+auglib.egg-info/SOURCES.txt
+auglib.egg-info/dependency_links.txt
+auglib.egg-info/requires.txt
+auglib.egg-info/top_level.txt
+auglib/core/__init__.py
+auglib/core/processor.py
+auglib/effects/__init__.py
+auglib/effects/atmospheric.py
+auglib/effects/optical.py
+config/__init__.py
+config/augmentations.py
