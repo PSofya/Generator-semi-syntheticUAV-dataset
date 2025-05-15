@@ -1,6 +1,6 @@
 # Generator-semi-syntheticUAV-dataset
 The generator is designed to synthesize realistic distortions in sets of aerial photographs taken from UAVs. The system implements a modular approach to transformations, ensuring reproducibility and control of augmentation parameters.
-#### Note: The effects of "fisheye" and wide-angle lens), geometric and photometric transformations and atmospheric conditions (fog overlay) are implemented.
+#### Note: The effects of "fisheye" and wide-angle lens, geometric and photometric transformations and atmospheric conditions (fog overlay) are implemented.
 
 ## 0. Table of Contents
 
@@ -177,7 +177,7 @@ The core processing workflow is implemented in the script located at: [processin
 The importance of this study lies in addressing the limitations of current visual localization methods that often struggle in complex environments. The modular design of the generator ensures **reproducibility, scalability, and compatibility** with downstream computer vision workflows.
 The results demonstrates that training models on the generated semi-synthetic data could lead to **improvements in localization accuracy**.
 
-## 4. Contacts
+## 5. Contacts
 Developer: saborisova_1@miem.hse.ru (Borisova Sofya)
 
 a.romanov@hse.ru (Aleksandr Romanov, Professor)
